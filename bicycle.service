@@ -1,0 +1,11 @@
+[Unit]
+Description=Bicycle MIDI Looper
+After=sound.target
+
+[Service]
+ExecStart=/home/patch/kitchen/bicycle/build/bicycle -c /home/patch/kitchen/bicycle/beepy.config
+EnvironmentFile=/etc/environment
+
+[Install]
+WantedBy=multi-user.target
+
